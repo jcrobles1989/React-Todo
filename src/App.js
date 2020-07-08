@@ -35,7 +35,9 @@ class App extends React.Component {
   }
 
   removeTask = () => {
-    this.state.tasks.filter(task => task.completed === true)
+    this.setState({
+      tasks: this.state.tasks.filter(task => !task.completed)
+    })
   }
 
   toggleTask = taskId => {

@@ -24,7 +24,8 @@ class TodoForm extends React.Component {
         })
     };
 
-    handleCompletedTasks = () => {
+    handleCompletedTasks = e => {
+        e.preventDefault();
         this.props.removeTask();
     }
 
